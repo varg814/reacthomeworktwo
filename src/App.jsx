@@ -22,7 +22,7 @@ function App() {
               />
             </svg>
           </div>
-          <img src="../src/imgs/Rectangle Copy.png" alt="jewish" />
+          <img src="./src/imgs/Rectangle Copy.png" alt="jewish" />
         </div>
         <div className="text">
           <h1 className="pointer">Equilibrium #3429</h1>
@@ -64,7 +64,7 @@ function App() {
           <div className="line"></div>
           <div className="content">
             <div className="author_image_container">
-              <img src="../src/imgs/Oval.png" alt="" />
+              <img src="./src/imgs/Oval.png" alt="" />
             </div>
             <p>
               Creation of <span className="pointer">Jules Wyvern</span>
