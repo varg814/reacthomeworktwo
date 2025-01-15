@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import image from './imgs/Rectangle Copy.png';  
+import image2 from './imgs/Oval.png';  
 
 function App() {
   return (
@@ -65,7 +66,7 @@ function App() {
           <div className="line"></div>
           <div className="content">
             <div className="author_image_container">
-              <img src="./src/imgs/Oval.png" alt="" />
+              <img src={image2} alt="" />
             </div>
             <p>
               Creation of <span className="pointer">Jules Wyvern</span>
