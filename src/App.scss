@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Russo+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+$cyan: #00fff8;
+$soft-blue: #8bacd9;
+$dark-background: #0d192c;
+$card-background: #15263f;
+$line-color: #2e405a;
+$white: #fff;
+$font: Outfit; 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  margin: 24px;
+}
+
+body {
+  background-color: $dark-background;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding: 24px;
+  width: 100%;
+  max-width: 350px;
+  background-color: $card-background;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 15px;
+
+  .image_container {
+    width: 100%;
+    max-width: 302px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+
+    .eye {
+      display: none;
+      position: absolute;
+      top: 42.05%;
+      left: 42.05%;
+      z-index: 999;
+    }
+
+    &:hover {
+      background-color: $cyan;
+      cursor: pointer;
+
+      > img {
+        opacity: 0.5;
+      }
+
+      > .eye {
+        display: block;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      z-index: 1;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h1 {
+      color: $white;
+      font-family: $font;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: normal;
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+
+    p {
+      color: $soft-blue;
+      font-family: $font;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 26px;
+    }
+  }
+
+  .eth {
+    display: flex;
+    justify-content: space-between;
+
+    .eth_child {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      gap: 7px;
+
+      &.one {
+        color: $cyan;
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 600;
+
+        &:hover {
+          color: $cyan;
+        }
+      }
+
+      &.two {
+        color: $soft-blue;
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 400;
+
+        svg {
+          fill: $soft-blue;
+        }
+      }
+    }
+  }
+
+  .author {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .line {
+      height: 1px;
+      background-color: $line-color;
+    }
+
+    .content {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+
+      p {
+        color: $soft-blue;
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 400;
+
+        span {
+          color: $white;
+          font-family: $font;
+          font-size: 16px;
+          font-weight: 400;
+
+          &:hover {
+            color: $cyan;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+
+  &:hover {
+    color: $cyan;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    gap: 16px;
+  }
+
+  .text {
+    gap: 12px;
+  }
+}
